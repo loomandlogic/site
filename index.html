@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loom & Logic | Automation No-Code & IA pour TPE/PME</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center group" aria-label="Loom & Logic Accueil">
+                <img src="logo.png" alt="Loom & Logic" class="h-9 w-auto block object-contain [filter:brightness(0)_invert(10%)_sepia(40%)_saturate(2500%)_hue-rotate(190deg)_brightness(40%)_contrast(100%)] dark:[filter:brightness(0)_invert(1)] transition-all duration-200" />
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
+                <a href="#offres" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Offres</a>
+                <a href="#securite" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Sécurité & Souveraineté</a>
+                <a href="#methode" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Méthode</a>
+                <a href="#contact" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" type="button" aria-label="Changer le thème" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                    <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
+                    <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
+                </button>
+                
+                <a href="#contact" class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-brand-600 text-white font-medium text-sm hover:bg-brand-700 transition-colors shadow-sm">
+                    Prendre contact
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950/50 border border-brand-200 dark:border-brand-800 text-brand-700 dark:text-brand-300 text-xs font-semibold uppercase tracking-wider mb-6">
+                    <i data-lucide="zap" class="w-3.5 h-3.5"></i> Automation No-Code & IA pour TPE/PME
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6 leading-tight">
+                    Gagnez jusqu'à <span class="text-brand-600 dark:text-brand-500">10h par semaine</span> sur vos tâches répétitives.
+                </h1>
+                <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                    Loom & Logic conçoit des pipelines automatisés et sécurisés pour libérer vos équipes du travail administratif sans valeur ajoutée.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-brand-600 text-white font-semibold hover:bg-brand-700 transition-colors shadow-md">
+                        Échanger sur votre projet <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                    </a>
+                    <a href="#offres" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-700 dark:text-slate-200 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                        Découvrir les offres
+                    </a>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-medium text-slate-500 dark:text-slate-400">
+                    <div class="flex items-center justify-center gap-2">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-500"></i> 100% Souverain & RGPD (Mistral)
+                    </div>
+                    <div class="flex items-center justify-center gap-2">
+                        <i data-lucide="dollar-sign" class="w-4 h-4 text-emerald-500"></i> Aucun abonnement caché
+                    </div>
+                    <div class="flex items-center justify-center gap-2">
+                        <i data-lucide="clock" class="w-4 h-4 text-emerald-500"></i> Déploiement rapide
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prestations / Offers Section -->
+        <section id="offres" class="py-16 bg-slate-100/50 dark:bg-slate-900/50 border-y border-slate-200 dark:border-slate-800">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-3">Formules d'accompagnement</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">Une tarification transparente, sans engagement ni frais cachés.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Pack 1 -->
+                    <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-brand-500/50 transition-colors">
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-950 text-brand-600 flex items-center justify-center mb-4">
+                                <i data-lucide="search" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Diagnostic & Cartographie</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Audit & modélisation de vos flux actuels.</p>
+                            <div class="text-3xl font-extrabold text-slate-900 dark:text-white mb-6">350 € <span class="text-xs font-normal text-slate-500">HT</span></div>
+                            <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300 mb-6">
+                                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i> Analyse de l'existant (AS-IS)</li>
+                                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i> Schéma cible Miro (TO-BE)</li>
+                                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i> Déduction à 100% si suite accordée</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="w-full py-2.5 px-4 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-medium text-sm text-center hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">Commander un audit</a>
+                    </div>
+
+                    <!-- Pack 2 -->
+                    <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border-2 border-brand-600 flex flex-col justify-between shadow-lg relative">
+                        <div class="absolute -top-3 right-6 bg-brand-600 text-white text-[10px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full">Recommandé</div>
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-950 text-brand-600 flex items-center justify-center mb-4">
+                                <i data-lucide="workflow" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Pipeline d'Automation</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Interconnexion de vos outils métier.</p>
+                            <div class="text-3xl font-extrabold text-slate-900 dark:text-white mb-6">980 € <span class="text-xs font-normal text-slate-500">HT</span></div>
+                            <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300 mb-6">
+                                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i> Liaison CRM, Mails, Formulaires</li>
+                                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i> Automatisation sur-mesure (Make)</li>
+                                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i> Tests & documentation livrée</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="w-full py-2.5 px-4 rounded-lg bg-brand-600 text-white font-medium text-sm text-center hover:bg-brand-700 transition-colors">Lancer un projet</a>
+                    </div>
+
+                    <!-- Pack 3 -->
+                    <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-brand-500/50 transition-colors">
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-950 text-brand-600 flex items-center justify-center mb-4">
+                                <i data-lucide="bot" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Assistant Doc & IA</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Traitement intelligent de documents.</p>
+                            <div class="text-3xl font-extrabold text-slate-900 dark:text-white mb-6">1 650 € <span class="text-xs font-normal text-slate-500">HT</span></div>
+                            <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300 mb-6">
+                                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i> Extraction auto de factures / devis</li>
+                                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i> Intégration IA Mistral AI / OpenAI</li>
+                                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i> Validation humaine sécurisée</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="w-full py-2.5 px-4 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-medium text-sm text-center hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">Intégrer l'IA</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sécurité & Valeurs Section -->
+        <section id="securite" class="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-3">Une approche fiable & transparente</h2>
+                <p class="text-slate-600 dark:text-slate-400 text-sm">Vos données restent sous votre contrôle strict.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <i data-lucide="shield-check" class="w-8 h-8 text-brand-600 mb-4"></i>
+                    <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">Sécurité & Souveraineté</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">
+                        Intégration recommandée avec <strong>Mistral AI</strong> (France/Europe) pour garantir la conformité RGPD et la souveraineté de vos données sensibles.
+                    </p>
+                </div>
+
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <i data-lucide="database" class="w-8 h-8 text-brand-600 mb-4"></i>
+                    <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">Transparence des coûts</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">
+                        Aucune marge cachée sur vos abonnements. Vos comptes d'outils (Make, API) restent votre propriété directe au prix coûtant (~1 à 3 €/mois).
+                    </p>
+                </div>
+
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <i data-lucide="unlock" class="w-8 h-8 text-brand-600 mb-4"></i>
+                    <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">Autonomie garantie</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">
+                        Chaque projet est entièrement documenté et transmis. Vos équipes gardent la main sur leurs outils sans dépendance technique.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Méthode Section -->
+        <section id="methode" class="py-16 bg-slate-100/50 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-3">Méthode de travail</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">3 étapes simples du premier échange au déploiement.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-bold text-lg flex items-center justify-center mb-4">1</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-1">Cadrage & Audit</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400">Échange ciblé de 30 min pour analyser vos processus et valider le périmètre.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-bold text-lg flex items-center justify-center mb-4">2</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-1">Conception & Tests</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400">Création des automatisations dans un environnement sécurisé avec gestion d'erreurs.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-bold text-lg flex items-center justify-center mb-4">3</div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-1">Mise en production</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400">Déploiement des flux, remise de la documentation et prise en main par vos équipes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact" class="py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-slate-900 p-8 sm:p-12 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Un projet d'automatisation ?</h2>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Décrivez brièvement votre besoin. Premier échange sans engagement.</p>
+                </div>
+
+                <form action="mailto:contact@loomandlogic.fr" method="post" enctype="text/plain" id="contact-form" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="name" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Nom complet</label>
+                            <input type="text" id="name" name="Nom" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-brand-500 outline-none">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Adresse e-mail</label>
+                            <input type="email" id="email" name="Email" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-brand-500 outline-none">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Description succinte du besoin</label>
+                        <textarea id="message" name="Message" rows="4" required placeholder="Ex: automatiser la saisie des factures récurrentes dans mon CRM..." class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-brand-500 outline-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 px-6 rounded-lg bg-brand-600 text-white font-semibold hover:bg-brand-700 transition-colors shadow-md text-sm">
+                        Envoyer la demande
+                    </button>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 text-center flex items-center justify-center gap-1 mt-2">
+                        <i data-lucide="lock" class="w-3 h-3"></i> Vos informations sont strictement utilisées pour répondre à votre demande.
+                    </p>
+                </form>
+
+                <div id="form-success" class="hidden text-center py-8">
+                    <i data-lucide="check-circle" class="w-12 h-12 text-emerald-500 mx-auto mb-3"></i>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Message envoyé !</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Merci pour votre intérêt. Je reviens vers vous sous 24h.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 dark:border-slate-800 py-8 bg-white dark:bg-slate-950 text-xs text-slate-500 dark:text-slate-400">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                <strong>Loom & Logic</strong> © 2026 — Intégration No-Code & IA pour TPE/PME
+            </div>
+            <div class="flex gap-6">
+                <a href="#" class="hover:underline">Mentions légales</a>
+                <a href="#" class="hover:underline">Confidentialité</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // Theme Toggle Script
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // Contact Form Feedback Handler
+        function handleFormSubmit() {
+            document.getElementById('contact-form').classList.add('hidden');
+            document.getElementById('form-success').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
