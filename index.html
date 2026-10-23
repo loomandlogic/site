@@ -47,6 +47,7 @@
                 <img src="logo.png" alt="Loom & Logic" class="h-[96px] w-auto block object-contain [filter:brightness(0)_invert(10%)_sepia(40%)_saturate(2500%)_hue-rotate(190deg)_brightness(40%)_contrast(100%)] dark:[filter:brightness(0)_invert(1)] transition-all duration-200" />
             </a>
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
+                <a href="#apropos" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">À propos</a>
                 <a href="#offres" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Offres</a>
                 <a href="#securite" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Sécurité & Souveraineté</a>
                 <a href="#methode" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Méthode</a>
@@ -104,6 +105,35 @@
             </div>
         </section>
 
+        <section id="apropos" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                <div>
+                    <div class="flex items-center gap-4 mb-5">
+                        <img src="antoine.jpg" alt="Antoine Gaucherand, fondateur de Loom & Logic" class="w-24 h-24 rounded-full object-cover border-2 border-brand-600">
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Antoine Gaucherand</h2>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Fondateur de Loom &amp; Logic</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        <p>J'accompagne les TPE, PME et dirigeants pour automatiser leurs tâches répétitives, structurer leurs flux de données et intégrer l'IA dans leur quotidien.</p>
+                        <p><strong class="text-slate-900 dark:text-white">Tout a commencé sur un chantier.</strong> Avec ma compagne, nous avons rénové seuls une maison en pierre bicentenaire : gros œuvre, électricité, plomberie, finitions. Partir de zéro, analyser un problème, se former en autodidacte et exécuter avec rigueur : c'est la démarche que j'applique aujourd'hui au digital, au service de votre entreprise.</p>
+                    </div>
+                </div>
+                <!-- Espace vidéo : renseigne VIDEO_URL dans le script (bloc 6) -->
+                <div>
+                    <div id="video-box" class="aspect-video w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 flex items-center justify-center">
+                        <div class="text-center text-slate-500 dark:text-slate-400 px-6">
+                            <i data-lucide="play-circle" class="w-12 h-12 mx-auto mb-2 text-brand-600"></i>
+                            <p class="text-sm font-medium">Vidéo de présentation à venir</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 text-center">Une démo concrète d'automatisation en moins de 2 minutes.</p>
+                </div>
+            </div>
+        </section>
+
+
 <!-- Prestations / Offers Section -->
         <section id="offres" class="py-16 bg-slate-100/50 dark:bg-slate-900/50 border-y border-slate-200 dark:border-slate-800">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,12 +171,12 @@
                             <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Interconnexion de vos outils métier.</p>
                             
                             <!-- Prix mis en avant avec déduction explicite -->
-                            <div class="mb-6">
-                                <div class="flex items-baseline gap-2">
-                                    <span class="text-3xl font-extrabold text-slate-900 dark:text-white">630 € <span class="text-xs font-normal text-slate-500">HT</span></span>
-                                    <span class="text-sm text-slate-400 dark:text-slate-500 line-through">980 €</span>
+                            <div class="mb-6 space-y-2">
+                                <div class="text-sm text-slate-500 dark:text-slate-400">Sans audit : <strong class="text-slate-900 dark:text-white">980 € HT</strong></div>
+                                <div class="rounded-xl bg-brand-50 dark:bg-brand-950/50 border border-brand-200 dark:border-brand-800 p-3">
+                                    <div class="text-3xl font-extrabold text-brand-700 dark:text-brand-300">630 € <span class="text-xs font-normal">HT</span></div>
+                                    <p class="text-[11px] text-brand-700 dark:text-brand-300 font-medium mt-1">après un audit (350 € déduits). L'audit n'est jamais payé deux fois.</p>
                                 </div>
-                                <p class="text-[11px] text-brand-600 dark:text-brand-400 font-medium mt-1">Soit 980 € - 350 € d'audit déduits</p>
                             </div>
 
                             <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300 mb-6">
@@ -168,12 +198,12 @@
                             <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Traitement intelligent de documents.</p>
                             
                             <!-- Prix mis en avant avec déduction explicite -->
-                            <div class="mb-6">
-                                <div class="flex items-baseline gap-2">
-                                    <span class="text-3xl font-extrabold text-slate-900 dark:text-white">1 300 € <span class="text-xs font-normal text-slate-500">HT</span></span>
-                                    <span class="text-sm text-slate-400 dark:text-slate-500 line-through">1 650 €</span>
+                            <div class="mb-6 space-y-2">
+                                <div class="text-sm text-slate-500 dark:text-slate-400">Sans audit : <strong class="text-slate-900 dark:text-white">1 650 € HT</strong></div>
+                                <div class="rounded-xl bg-brand-50 dark:bg-brand-950/50 border border-brand-200 dark:border-brand-800 p-3">
+                                    <div class="text-3xl font-extrabold text-brand-700 dark:text-brand-300">1 300 € <span class="text-xs font-normal">HT</span></div>
+                                    <p class="text-[11px] text-brand-700 dark:text-brand-300 font-medium mt-1">après un audit (350 € déduits). L'audit n'est jamais payé deux fois.</p>
                                 </div>
-                                <p class="text-[11px] text-brand-600 dark:text-brand-400 font-medium mt-1">Soit 1 650 € - 350 € d'audit déduits</p>
                             </div>
 
                             <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300 mb-6">
@@ -210,9 +240,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- Sécurité & Valeurs Section -->
         <section id="securite" class="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -299,7 +327,7 @@
                         </div>
                     </div>
                     <div>
-                        <label for="message" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Description succinte du besoin</label>
+                        <label for="message" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Description succincte du besoin</label>
                         <textarea id="message" name="message" rows="4" required placeholder="Ex: automatiser la saisie des factures récurrentes dans mon CRM..." class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-brand-500 outline-none"></textarea>
                     </div>
                     <button type="submit" class="w-full py-3 px-6 rounded-lg bg-brand-600 text-white font-semibold hover:bg-brand-700 transition-colors shadow-md text-sm">
@@ -326,8 +354,8 @@
                 <strong>Loom & Logic</strong> © 2026 — Intégration No-Code & IA pour TPE/PME
             </div>
             <div class="flex gap-6">
-                <a href="#" class="hover:underline">Mentions légales</a>
-                <a href="#" class="hover:underline">Confidentialité</a>
+                <a href="mentions-legales.html" class="hover:underline">Mentions légales</a>
+                <a href="mentions-legales.html#confidentialite" class="hover:underline">Confidentialité</a>
             </div>
         </div>
     </footer>
