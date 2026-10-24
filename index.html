@@ -362,14 +362,12 @@
     <script>
         // Init Lucide Icons
         lucide.createIcons();
-        const VIDEO_URL = ""; // ex: "https://www.youtube.com/watch?v=1MBOfdDLux4"
+        const VIDEO_URL = "https://youtu.be/1MBOfdDLux4"; // Lien YouTube
         if (VIDEO_URL) {
             const box = document.getElementById('video-box');
             let html;
             const yt = VIDEO_URL.match(/(?:youtu\.be\/|v=)([\w-]{11})/);
-            const vm = VIDEO_URL.match(/vimeo\.com\/(\d+)/);
             if (yt) html = `<iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/${yt[1]}" title="Présentation Loom & Logic" allowfullscreen></iframe>`;
-            else if (vm) html = `<iframe class="w-full h-full" src="https://player.vimeo.com/video/${vm[1]}" title="Présentation Loom & Logic" allowfullscreen></iframe>`;
             else html = `<video class="w-full h-full" src="${VIDEO_URL}" controls preload="metadata"></video>`;
             box.innerHTML = html;
         }
