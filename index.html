@@ -125,7 +125,7 @@
                     <div id="video-box" class="aspect-video w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 flex items-center justify-center">
                         <div class="text-center text-slate-500 dark:text-slate-400 px-6">
                             <i data-lucide="play-circle" class="w-12 h-12 mx-auto mb-2 text-brand-600"></i>
-                            <p class="text-sm font-medium">Vidéo de présentation à venir</p>
+                            <!-- <p class="text-sm font-medium">Vidéo de présentation à venir</p> -->
                         </div>
                     </div>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 text-center">Une démo concrète d'automatisation en moins de 2 minutes.</p>
@@ -362,7 +362,17 @@
     <script>
         // Init Lucide Icons
         lucide.createIcons();
-
+        const VIDEO_URL = ""; // ex: "https://www.youtube.com/watch?v=1MBOfdDLux4"
+        if (VIDEO_URL) {
+            const box = document.getElementById('video-box');
+            let html;
+            const yt = VIDEO_URL.match(/(?:youtu\.be\/|v=)([\w-]{11})/);
+            const vm = VIDEO_URL.match(/vimeo\.com\/(\d+)/);
+            if (yt) html = `<iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/${yt[1]}" title="Présentation Loom & Logic" allowfullscreen></iframe>`;
+            else if (vm) html = `<iframe class="w-full h-full" src="https://player.vimeo.com/video/${vm[1]}" title="Présentation Loom & Logic" allowfullscreen></iframe>`;
+            else html = `<video class="w-full h-full" src="${VIDEO_URL}" controls preload="metadata"></video>`;
+            box.innerHTML = html;
+        }
         // Theme Toggle Script
         const themeToggleBtn = document.getElementById('theme-toggle');
         
