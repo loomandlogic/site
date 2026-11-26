@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications Mobiles | Bureaucratie95: Idle Clicker — Loom & Logic</title>
+    <!-- Vercel Web Analytics -->
+    <script>
+        window.va = window.va || function () { 
+            (window.vaq = window.vaq || []).push(arguments); 
+        };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center group" aria-label="Loom & Logic Accueil">
+                <img src="logo.png" alt="Loom & Logic" class="h-[96px] w-auto block object-contain [filter:brightness(0)_invert(10%)_sepia(40%)_saturate(2500%)_hue-rotate(190deg)_brightness(40%)_contrast(100%)] dark:[filter:brightness(0)_invert(1)] transition-all duration-200" />
+            </a>
+            <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600 dark:text-slate-300">
+                <a href="index.html#apropos" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">À propos</a>
+                <a href="index.html#offres" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Offres</a>
+                <a href="mobile_apps.html" class="text-brand-600 dark:text-brand-400 font-semibold transition-colors">Applications mobiles</a>
+                <a href="index.html#securite" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Sécurité & Souveraineté</a>
+                <a href="index.html#methode" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Méthode</a>
+                <a href="#contact" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" type="button" aria-label="Changer le thème" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                    <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
+                    <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
+                </button>
+                
+                <a href="#contact" class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-brand-600 text-white font-medium text-sm hover:bg-brand-700 transition-colors shadow-sm">
+                    Prendre contact
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="py-20 lg:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950/50 border border-brand-200 dark:border-brand-800 text-brand-700 dark:text-brand-300 text-xs font-semibold uppercase tracking-wider mb-6">
+                    <i data-lucide="smartphone" class="w-3.5 h-3.5"></i> Android Natif • Kotlin & Jetpack Compose
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6 leading-tight">
+                    Développement d'applications <span class="text-brand-600 dark:text-brand-500">Android sur-mesure</span>.
+                </h1>
+                <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                    Conception de bout en bout d'applications mobiles natives, fluides et maintenables — du prototype jusqu'à la mise en production sur le Google Play Store.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-brand-600 text-white font-semibold hover:bg-brand-700 transition-colors shadow-md">
+                        Discuter d'un projet mobile <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                    </a>
+                    <a href="#realisation" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-700 dark:text-slate-200 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                        Voir Bureaucratie95
+                    </a>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-medium text-slate-500 dark:text-slate-400">
+                    <div class="flex items-center justify-center gap-2">
+                        <i data-lucide="cpu" class="w-4 h-4 text-emerald-500"></i> 100% Natif Kotlin / Compose
+                    </div>
+                    <div class="flex items-center justify-center gap-2">
+                        <i data-lucide="play" class="w-4 h-4 text-emerald-500"></i> Publié sur Google Play
+                    </div>
+                    <div class="flex items-center justify-center gap-2">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-500"></i> Code propre & maîtrisé
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Réalisation : Bureaucratie95: Idle Clicker -->
+        <section id="realisation" class="py-16 bg-slate-100/50 dark:bg-slate-900/50 border-y border-slate-200 dark:border-slate-800">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-3">Application en production</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">Un projet développé et poussé sur le Google Play Store de la conception jusqu'à la publication.</p>
+                </div>
+
+                <div class="bg-white dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-800 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <!-- Emplacement capture d'écran -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="w-[210px] h-[400px] bg-slate-950 border-[3px] border-slate-700 rounded-[32px] p-3 shadow-xl flex flex-col">
+                            <div class="w-14 h-1.5 bg-slate-700 rounded-full mx-auto mb-2.5"></div>
+                            <div class="flex-1 rounded-[20px] bg-slate-900 border border-dashed border-slate-700 flex flex-col items-center justify-center text-center p-4 text-xs text-slate-400">
+                                <!-- Remplacer le bloc ci-dessous par :
+                                     <img src="bureaucratie95-screen.png" alt="Capture d'écran Bureaucratie95: Idle Clicker" class="w-full h-full object-cover rounded-[18px]"> -->
+                                <i data-lucide="image" class="w-8 h-8 text-brand-500 mb-2"></i>
+                                <span class="font-semibold text-slate-200 mb-1">Bureaucratie95: Idle Clicker</span>
+                                <span>Capture d'écran à ajouter ici</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Détails -->
+                    <div class="lg:col-span-7 space-y-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-50 dark:bg-brand-950 text-brand-700 dark:text-brand-300 border border-brand-200 dark:border-brand-800">
+                                Google Play Store
+                            </span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                                Kotlin &amp; Jetpack Compose
+                            </span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                                Idle Clicker
+                            </span>
+                        </div>
+
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                            Bureaucratie95: Idle Clicker
+                        </h3>
+
+                        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                            Jeu mobile idle clicker développé nativement sous Android avec Kotlin et Jetpack Compose. Conception de l'interface, mécanique de progression, équilibrage, persistance des données et mise en ligne sur le Google Play Store.
+                        </p>
+
+                        <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300 pt-1">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0"></i>
+                                <span>Interface réactive construite avec Jetpack Compose</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0"></i>
+                                <span>Cycle complet de publication et conformité Google Play</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0"></i>
+                                <span>Politique de confidentialité dédiée disponible</span>
+                            </li>
+                        </ul>
+
+                        <div class="pt-4 flex flex-wrap items-center gap-4">
+                            <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-brand-600 text-white font-semibold text-sm hover:bg-brand-700 transition-colors">
+                                Échanger sur un projet similaire <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                            </a>
+                            <a href="bureaucratie95-privacy.html" class="text-sm font-medium text-brand-600 dark:text-brand-400 hover:underline">
+                                Politique de confidentialité →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact" class="py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-slate-900 p-8 sm:p-12 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Un projet d'application Android ?</h2>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Décrivez brièvement votre besoin. Premier échange sans engagement.</p>
+                </div>
+
+                <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="space-y-4">
+                    <input type="hidden" name="access_key" value="f63e544a-38ac-435e-ab33-57b9e7bd675a">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="name" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Nom complet</label>
+                            <input type="text" id="name" name="nom" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-brand-500 outline-none">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Adresse e-mail</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-brand-500 outline-none">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Description succincte du besoin</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Ex: développer une application Android interne ou grand public..." class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-brand-500 outline-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 px-6 rounded-lg bg-brand-600 text-white font-semibold hover:bg-brand-700 transition-colors shadow-md text-sm">
+                        Envoyer la demande
+                    </button>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 text-center flex items-center justify-center gap-1 mt-2">
+                        <i data-lucide="lock" class="w-3 h-3"></i> Vos informations sont strictement utilisées pour répondre à votre demande.
+                    </p>
+                </form>
+
+                <div id="form-success" class="hidden text-center py-8">
+                    <i data-lucide="check-circle" class="w-12 h-12 text-emerald-500 mx-auto mb-3"></i>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Message envoyé !</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Merci pour votre intérêt. Je reviens vers vous sous 24h.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 dark:border-slate-800 py-8 bg-white dark:bg-slate-950 text-xs text-slate-500 dark:text-slate-400">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                <strong>Loom & Logic</strong> © 2026 — Intégration No-Code & IA pour TPE/PME
+            </div>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="mentions-legales.html" class="hover:underline">Mentions légales</a>
+                <a href="mentions-legales.html#confidentialite" class="hover:underline">Confidentialité</a>
+                <a href="bureaucratie95-privacy.html" class="hover:underline">Confidentialité Bureaucratie 95</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        lucide.createIcons();
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+    </script>
+</body>
+</html>
